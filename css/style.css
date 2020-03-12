@@ -26,3 +26,11 @@
     width: 120px;
     margin: 0 auto;
 }
+
+img{
+    width: 64px;
+    padding-left: 20px;
+}
+P{
+    word-spacing: 60px;
+}
