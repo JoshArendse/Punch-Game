@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>PunchGame</title>
 </head>
 <body>
@@ -18,13 +19,13 @@
 
             <div id="bag-health">
                 <div v-bind:style="{width: health +'%'}"></div>
-            </div>
+            </div><br>
 
         <!-- game controls -->
 
         <div id="controls">
-            <button v-on:click="punch" v-show="!ended">Punch</button>
-            <button v-on:click="restart">Restart</button><br><br>
+            <button v-on:keypress.j="jab" v-on:keypress.h="hook" v-on:keypress.k="ko" v-show="!ended">Start</button>
+            <button v-on:click="restart" v-show="ended">Restart</button><br><br><br>
         </div>
 
         <div style="text-align: center;">
